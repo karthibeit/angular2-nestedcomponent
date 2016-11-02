@@ -5,16 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
 import { AboutComponent } from './about.component';
 @NgModule({
-    imports: [BrowserModule,
-        RouterModule.forRoot([
-            {path:'', component: HomeComponent},
-            {path: 'about', component: AboutComponent, 
-            children : [
-                
-            ]
-    }
-        ]),
-    ],
+    imports: [BrowserModule],
     
     declarations: [AppComponent, AboutComponent, HomeComponent],
     bootstrap: [AppComponent]

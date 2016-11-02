@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 @Component({
     selector: 'my-app',
-    template: `<h1>My First Angular App</h1>
-    <a routerLink=''>Home</a>
-    <a routerLink='/about'>About</a>
-    <router-outlet></router-outlet>
-    `
+    template: `<div><h1> container component</h1>
+  <about-app [title]='childTitle' (notify)='onNotify($event)'></about-app>
+</div> `
 })
-export class AppComponent { }
+export class AppComponent {
+    childTitle: string = 'This text is passed to child';
+
+    onNotify(message: string): void {
+        alert(message);
+    }
+ }
